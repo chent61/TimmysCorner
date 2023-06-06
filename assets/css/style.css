@@ -35,13 +35,13 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    hsl(169, 71%, 67%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
+    hsla(169, 71%, 67%, 0.251) 0%, 
+    hsla(181, 100%, 39%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -50,8 +50,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(169, 71%, 67%), 
+    hsl(181, 100%, 39%)
   );
 
   /* solid */
@@ -63,8 +63,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(169, 71%, 67%);
+  --vegas-gold: hsl(181, 100%, 39%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -155,7 +155,12 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { 
+  background: var(--smoky-black); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../images/101.jpeg');
+}
 
 
 
@@ -208,12 +213,7 @@ article {
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
 
-article { display: none; }
 
-article.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
 
 @keyframes fade {
   0% { opacity: 0; }
@@ -331,7 +331,7 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
+.avatar-box profilePicture{
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
 }
@@ -1337,7 +1337,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box #profilePicture { border-radius: 30px; }
 
   .avatar-box img { width: 120px; }
 
@@ -1699,13 +1699,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .navbar {
-    position: absolute;
+    position: sticky;
     bottom: auto;
     top: 0;
     left: auto;
     right: 0;
-    width: max-content;
-    border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none;
   }
@@ -1794,7 +1792,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: auto; }
 
-  article { min-height: 100%; }
+  article { min-height: 90%; border-radius: 0px 0px 20px 20px;}
 
 
 
@@ -1829,7 +1827,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    padding-top: 60px;
     z-index: 1;
   }
 
