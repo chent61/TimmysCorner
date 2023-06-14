@@ -151,7 +151,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
         window.scrollTo({top, behavior: "smooth"});
       }else {
       const sectionOffset = targetSection.offsetTop;
-      const offset = 20; 
+      const offset = 10; 
 
       window.scrollTo({
         top: sectionOffset - offset,
