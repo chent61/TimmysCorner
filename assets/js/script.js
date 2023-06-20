@@ -50,8 +50,8 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+// modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+// overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
@@ -169,7 +169,7 @@ function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
   return (
-    rect.bottom >=65 && rect.top <= windowHeight
+    rect.bottom >=75 && rect.top <= windowHeight
   );
 }
 
@@ -207,4 +207,18 @@ window.addEventListener("scroll", function() {
   } else {
     navbar.style.borderRadius = "";
   }
+});
+
+const dropdowns = document.querySelectorAll('.dropdown-button');
+const descriptions = document.querySelectorAll('.description');
+dropdowns.forEach((dropdown, index) => {
+  dropdown.addEventListener('click', function() {
+    descriptions[index].classList.toggle('active');
+
+    if (descriptions[index].classList.contains('active')) {
+      dropdown.innerHTML = 'Description  ▲';
+    } else {
+      dropdown.innerHTML = 'Description  ▼';
+    }
+  });
 });

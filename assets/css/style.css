@@ -866,6 +866,37 @@ main {
   line-height: 1.6;
 }
 
+.description{
+  display: none;
+}
+
+.description.active{
+  display: block;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #DEF5F3;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-pill {
+  display: inline-block;
+  background-color: #eaeaea;
+  color: #333;
+  padding: 4px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 14px;
+}
 
 /**
  * skills 
@@ -873,7 +904,7 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+/* .skills-list { padding: 20px; } */
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
